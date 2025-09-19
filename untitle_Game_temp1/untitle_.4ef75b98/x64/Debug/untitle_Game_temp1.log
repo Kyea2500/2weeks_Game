@@ -1,2 +1,20 @@
-﻿  SceneMain.cpp
-  untitle_Game_temp1.vcxproj -> C:\Users\安藤 歩夢\OneDrive - ooharastudent\デスクトップ\untitle_Game_temp1\x64\Debug\untitle_Game_temp1.exe
+﻿  player.cpp
+  SceneMain.cpp
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(197,17): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(400,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(400,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(405,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(405,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(410,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(410,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(415,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(415,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(420,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(420,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(458,43): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(458,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  コードを生成中...
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(254,1): warning C4715: 'player::GetShotRadius': 値を返さないコントロール パスがあります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(243,1): warning C4715: 'player::ShotGetPosY': 値を返さないコントロール パスがあります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(232,1): warning C4715: 'player::ShotGetPosX': 値を返さないコントロール パスがあります。
+  untitle_Game_temp1.vcxproj -> C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\x64\Debug\untitle_Game_temp1.exe

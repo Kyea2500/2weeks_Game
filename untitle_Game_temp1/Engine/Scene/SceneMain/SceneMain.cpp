@@ -16,8 +16,7 @@ namespace
 SceneMain::SceneMain()
 	: m_pPlayer(nullptr), // プレイヤーのポインタを初期化
 	m_pEnemy(nullptr),    // 敵のポインタを初期化
-	m_pBg(nullptr),       // 背景のポインタを初期化
-	m_isHit(false)       // 衝突状態を初期化
+	m_pBg(nullptr)       // 背景のポインタを初期化
 {
 }
 
@@ -74,17 +73,18 @@ void SceneMain::Draw()
 
 void SceneMain::HitPlayerShot()
 {
-	for (int i = 0; i <= kMaxShot; i++)
+	float dx = m_pPlayer->ShotGetPosX() - m_pEnemy->EnemyGetPosX();
+	float dy = m_pPlayer->ShotGetPosY() - m_pEnemy->EnemyGetPosY();
+	float distance = sqrtf(dx * dx + dy * dy);
+	if (distance < m_pPlayer->GetShotRadius() + m_pEnemy->GetEnemyRadius())
 	{
-		float dx = m_pPlayer->ShotGetPosX() - m_pEnemy->EnemyGetPosX();
-		float dy = m_pPlayer->ShotGetPosY() - m_pEnemy->EnemyGetPosY();
-		float distance = sqrtf(dx * dx + dy * dy);
-		if (distance < m_pPlayer->GetShotRadius() + m_pEnemy->GetEnemyRadius())
-		{
-			// 衝突した場合の処理
-			// ここに衝突時の処理を追加
-		}
+		// 衝突した場合の処理
+		// ここに衝突時の処理を追加
+		m_pPlayer->HitShot();
+		m_pEnemy->EnemysDamage();
 	}
+		
+	
 }
 
 void SceneMain::HitPlayerEnemy()
@@ -96,5 +96,6 @@ void SceneMain::HitPlayerEnemy()
 	{
 		// 衝突した場合の処理
 		// ここに衝突時の処理を追加
+		m_pPlayer->Damage();
 	}
 }

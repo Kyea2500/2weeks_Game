@@ -17,9 +17,6 @@ namespace
 	// プレイヤーの色
 	constexpr int kPlayerColor = 0xff2525; // 赤色
 
-	const int kPlayerDamage1 = LoadGraph("Date/Player/Player_Damage.png");
-	const int kPlayerDamage2 = LoadGraph("Date/Player/Player_Damage2.png");
-	const int kPlayerDamage3 = LoadGraph("Date/Player/Player_Damage3.png");
 
 	// エンジン部分のアニメーションのコマ数
 	constexpr int kEngineIdleAnimeNum = 2;
@@ -61,18 +58,27 @@ namespace
 	constexpr float kScale = 0.5f;
 	constexpr int MaxShot = 20;
 
+	// プレイヤーの体力
+	constexpr int kPlayerLifeMax = 3;
+	constexpr int kPlayerLifeMidium = 2;
+	constexpr int kPlayerLifeLow = 1;
+
 }
 
 player::player()
 	: m_pos(0.0f, 0.0f), // プレイヤーの初期座標を設定
 	speed(kPlayerSpeed), // プレイヤーの移動速度を設定
 	m_playerHandle(-1), // プレイヤーの画像ハンドルを初期化
+	m_playerDamage1Handle(-1), // プレイヤーのダメージ1画像ハンドルを初期化
+	m_playerDamage2Handle(-1), // プレイヤーのダメージ2画像ハンドルを初期化
+	m_playerDeadHandle(-1), // プレイヤーの死亡画像ハンドルを初期化
 	m_engineHandleIdle(-1), // エンジン部分の画像ハンドルを初期化
 	m_engineHandleMove(-1), // エンジン部分の移動中画像ハンドルを初期化
 	m_animFrame(0), // アニメーションフレームを初期化
 	m_isMove(false), // プレイヤーの移動状態を初期化
 	m_isLastShot(false), // 最後に撃った弾がどれかを初期化
-	m_shotTimer(0) // プレイヤーの射撃タイマーを初期化
+	m_shotTimer(0), // プレイヤーの射撃タイマーを初期化
+	m_playerLife(kPlayerLifeMax)
 {
 	for (int i = 0; i <= MaxShot; i++)
 	{
@@ -93,6 +99,9 @@ void player::Init()
 	m_pos.y = kInitialPosY; // 画面の中央に配置
 	// プレイヤーの画像を読み込む
 	m_playerHandle = LoadGraph("Date/Player/Player_Full.png");
+	m_playerDamage1Handle = LoadGraph("Date/Player/Player_Damage1.png");
+	m_playerDamage2Handle = LoadGraph("Date/Player/Player_Damage2.png");
+	m_playerDeadHandle = LoadGraph("Date/Player/Player_Damage3.png");
 	// エンジン部分の画像を読み込む
 	m_engineHandleIdle = LoadGraph("Date/Effects/Player_IdleEngine.png");
 	m_engineHandleMove = LoadGraph("Date/Effects/Player_MoveingEngine.png");
@@ -117,6 +126,24 @@ void player::End()
 		DeleteGraph(m_playerHandle);
 		m_playerHandle = -1;
 	}
+	if (m_playerDamage1Handle != -1)
+	{
+		DeleteGraph(m_playerDamage1Handle);
+		m_playerDamage1Handle = -1;
+	}
+	if (m_playerDamage2Handle != -1)
+	{
+		DeleteGraph(m_playerDamage2Handle);
+		m_playerDamage2Handle = -1;
+	}
+	if (m_playerDeadHandle != -1)
+	{
+		DeleteGraph(m_playerDeadHandle);
+		m_playerDeadHandle = -1;
+	}
+
+
+
 	// エンジン部分の画像を解放
 	if (m_engineHandleIdle != -1)
 	{
@@ -224,6 +251,25 @@ float player::GetShotRadius()
 			return kShotRadius;
 		}
 	}
+}
+
+void player::HitShot()
+{
+	for(int i=0;i<=MaxShot;i++)
+	{
+		if (m_isShot[i]==true)
+		{
+			m_shotPos[i] = m_pos; // プレイヤーの位置に戻す
+			m_isShot[i] = false; // 弾が撃たれていない状態にする
+		}
+	}
+}
+
+void player::Damage()
+{
+	// ダメージを受けたときの処理
+	m_playerLife--;
+
 }
 
 
@@ -353,11 +399,25 @@ void player::DrawPlayer()
 	// プレイヤーの描画処理
 	DrawCircle(m_pos.x, m_pos.y, kPlayerRadius, kPlayerColor, FALSE); // 赤い円を描画
 
-	// プレイヤーの画像を描画
-	if (m_playerHandle != -1)
+	if (m_playerLife == kPlayerLifeMax)
 	{
 		// 円の中心に描画
 		DrawRotaGraph(m_pos.x, m_pos.y, kPlayerScale, kPlayerAngle, m_playerHandle, TRUE);
+	}
+	else if (m_playerLife == kPlayerLifeMidium)
+	{
+		// 円の中心に描画
+		DrawRotaGraph(m_pos.x, m_pos.y, kPlayerScale, kPlayerAngle, m_playerDamage1Handle, TRUE);
+	}
+	else if (m_playerLife == kPlayerLifeLow)
+	{
+		// 円の中心に描画
+		DrawRotaGraph(m_pos.x, m_pos.y, kPlayerScale, kPlayerAngle, m_playerDamage2Handle, TRUE);
+	}
+	else if (m_playerLife <= 0)
+	{
+		// 円の中心に描画
+		DrawRotaGraph(m_pos.x, m_pos.y, kPlayerScale, kPlayerAngle, m_playerDeadHandle, TRUE);
 	}
 }
 

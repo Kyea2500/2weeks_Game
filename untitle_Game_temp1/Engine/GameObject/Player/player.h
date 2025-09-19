@@ -28,6 +28,9 @@ public:
 	float ShotGetPosY();
 	float GetShotRadius();
 
+	void HitShot();
+	void Damage();
+
 private:
 	void UpdateMove();
 	void UpdateShot();
@@ -41,6 +44,9 @@ private:
 	Vec2 m_pos;
 	// プレイヤーの画像処理
 	int m_playerHandle;
+	int m_playerDamage1Handle;
+	int m_playerDamage2Handle;
+	int m_playerDeadHandle;
 	//　エンジン部分の画像ハンドル
 	int m_engineHandleIdle;
 	int m_engineHandleMove;
@@ -63,4 +69,7 @@ private:
 
 	// ゲーム開始時に弾が出ないよう、すこしだけ時間を空ける
 	int m_shotTimer;
+
+	// プレイヤーのHP
+	int m_playerLife;
 };

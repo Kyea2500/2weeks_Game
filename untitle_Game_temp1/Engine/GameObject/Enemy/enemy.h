@@ -20,6 +20,8 @@ public:
 	float EnemyGetPosX();
 	float EnemyGetPosY();
 	float GetEnemyRadius();
+
+	void EnemysDamage();
 private:
 	// “G‚ÌˆÊ’u
 	Vec2 m_pos;
@@ -27,4 +29,8 @@ private:
 	int m_speed;
 	int m_enemyHandle;
 
+	// “G‚Ì‘Ì—Í
+	int m_Life;
+	// –³“GŠÔ‚Ìİ’è
+	int m_blinkFrameCount;
 };

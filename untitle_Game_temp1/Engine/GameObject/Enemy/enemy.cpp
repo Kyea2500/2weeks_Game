@@ -22,10 +22,16 @@ namespace
 	// 敵の拡大率
 	constexpr double kEnemyScale = 2.0;
 
+	// 敵の体力
+	constexpr int kEnemyLife = 30;
+	// ダメージを受けたときの点滅フレーム数
+	constexpr int kDamageBlinkFrame = 60;
+
 }
 enemy::enemy() :m_pos(0.0f,0.0f),
 	m_speed(kEnemySpeed),
-	m_enemyHandle(-1)
+	m_enemyHandle(-1),
+	m_Life(kEnemyLife)
 {
 }
 
@@ -50,6 +56,13 @@ void enemy::End()
 
 void enemy::Update()
 {
+	// 無敵時間の更新
+	m_blinkFrameCount--;
+	if (m_blinkFrameCount < 0)
+	{
+		m_blinkFrameCount = 0;
+	}
+
 	// 敵は上下に移動する
 	m_pos.y += m_speed;
 	// 画面の上端に到達したら下に移動
@@ -86,4 +99,19 @@ float enemy::EnemyGetPosY()
 float enemy::GetEnemyRadius()
 {
 	return kEnemyRadius;
+}
+
+void enemy::EnemysDamage()
+{
+	if (m_blinkFrameCount > 0) return;
+	// 無敵時間(点滅する時間)を設定する
+	m_blinkFrameCount = kDamageBlinkFrame;
+	m_Life--;
+	// ダメージを受けたときの処理
+	m_Life--;
+	if (m_Life <= 0)
+	{
+		m_Life = 0;
+		// ここに敵が倒されたときの処理を追加
+	}
 }
