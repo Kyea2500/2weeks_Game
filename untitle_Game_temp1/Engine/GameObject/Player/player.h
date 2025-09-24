@@ -72,4 +72,7 @@ private:
 
 	// ƒvƒŒƒCƒ„[‚ÌHP
 	int m_playerLife;
+
+	// –³“GŠÔ‚Ìİ’è
+	int m_blinkFrameCount;
 };

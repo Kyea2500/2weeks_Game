@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneMain\\SceneMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\GameObject\\Enemy\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneMain\\SceneMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\GameObject\\Enemy\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Player\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -19,16 +19,32 @@
       "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\GameObject\\Player\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\GameObject\\Enemy\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\GameObject\\Enemy\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneMain\\SceneMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneMain\\SceneMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneClear\\SceneClear.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneClear\\SceneClear.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneTitle\\SceneTitle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Bg\\Bg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -43,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneGameOver\\SceneGameOver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\InputDevice\\Pad\\Pad.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\InputDevice\\Pad\\Pad.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -55,24 +67,8 @@
       "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\InputDevice\\Vec2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneTitle\\SceneTitle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\InputDevice\\Pad\\Pad.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\InputDevice\\Pad\\Pad.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:Engine\\Scene\\SceneTitle\\SceneTitle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EF75B98-F6BA-4457-A89F-43ADEC6FA096}|untitle_Game_temp1.vcxproj|C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneManager\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -90,106 +86,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "SceneTitle.h",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.h",
-              "RelativeDocumentMoniker": "Engine\\Scene\\SceneTitle\\SceneTitle.h",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.h",
-              "RelativeToolTip": "Engine\\Scene\\SceneTitle\\SceneTitle.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-11T05:04:53.014Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "enemy.h",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.h",
-              "RelativeDocumentMoniker": "Engine\\GameObject\\Enemy\\enemy.h",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.h",
-              "RelativeToolTip": "Engine\\GameObject\\Enemy\\enemy.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-18T05:06:39.277Z",
-              "IsPinned": true,
+              "DocumentIndex": 2,
+              "Title": "player.cpp",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Player\\player.cpp",
+              "RelativeDocumentMoniker": "Engine\\GameObject\\Player\\player.cpp",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Player\\player.cpp",
+              "RelativeToolTip": "Engine\\GameObject\\Player\\player.cpp",
+              "ViewState": "AgIAAHgBAAAAAAAAAAAAAJcBAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-24T03:15:03.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "enemy.cpp",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.cpp",
-              "RelativeDocumentMoniker": "Engine\\GameObject\\Enemy\\enemy.cpp",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.cpp",
-              "RelativeToolTip": "Engine\\GameObject\\Enemy\\enemy.cpp",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAwGoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-18T05:06:38.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SceneClear.h",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneClear\\SceneClear.h",
-              "RelativeDocumentMoniker": "Engine\\Scene\\SceneClear\\SceneClear.h",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneClear\\SceneClear.h",
-              "RelativeToolTip": "Engine\\Scene\\SceneClear\\SceneClear.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-11T05:06:22.575Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SceneTitle.cpp",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.cpp",
-              "RelativeDocumentMoniker": "Engine\\Scene\\SceneTitle\\SceneTitle.cpp",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.cpp",
-              "RelativeToolTip": "Engine\\Scene\\SceneTitle\\SceneTitle.cpp",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEsAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-11T05:04:55.29Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SceneGameOver.cpp",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp",
-              "RelativeDocumentMoniker": "Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp",
-              "RelativeToolTip": "Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-11T05:00:33.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SceneMain.h",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.h",
-              "RelativeDocumentMoniker": "Engine\\Scene\\SceneMain\\SceneMain.h",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.h",
-              "RelativeToolTip": "Engine\\Scene\\SceneMain\\SceneMain.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-11T06:02:45.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "SceneMain.cpp",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.cpp",
               "RelativeDocumentMoniker": "Engine\\Scene\\SceneMain\\SceneMain.cpp",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.cpp*",
-              "RelativeToolTip": "Engine\\Scene\\SceneMain\\SceneMain.cpp*",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGIAAAAWAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.cpp",
+              "RelativeToolTip": "Engine\\Scene\\SceneMain\\SceneMain.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-11T06:02:14.475Z",
               "EditorCaption": ""
@@ -202,27 +122,118 @@
               "RelativeDocumentMoniker": "Engine\\GameObject\\Player\\player.h",
               "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Player\\player.h",
               "RelativeToolTip": "Engine\\GameObject\\Player\\player.h",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADAAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAEwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-09-11T05:53:46.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "player.cpp",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Player\\player.cpp",
-              "RelativeDocumentMoniker": "Engine\\GameObject\\Player\\player.cpp",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Player\\player.cpp*",
-              "RelativeToolTip": "Engine\\GameObject\\Player\\player.cpp*",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHgAAAASAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "SceneManager.cpp",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneManager\\SceneManager.cpp",
+              "RelativeDocumentMoniker": "Engine\\Scene\\SceneManager\\SceneManager.cpp",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneManager\\SceneManager.cpp",
+              "RelativeToolTip": "Engine\\Scene\\SceneManager\\SceneManager.cpp",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowG4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-11T05:54:11.932Z",
+              "WhenOpened": "2025-09-11T05:21:16.991Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "enemy.cpp",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.cpp",
+              "RelativeDocumentMoniker": "Engine\\GameObject\\Enemy\\enemy.cpp",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.cpp",
+              "RelativeToolTip": "Engine\\GameObject\\Enemy\\enemy.cpp",
+              "ViewState": "AgIAAEoBAAAAAAAAAAAMwFMBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-18T05:06:38.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "enemy.h",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.h",
+              "RelativeDocumentMoniker": "Engine\\GameObject\\Enemy\\enemy.h",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Enemy\\enemy.h",
+              "RelativeToolTip": "Engine\\GameObject\\Enemy\\enemy.h",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAcwEsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-18T05:06:39.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SceneMain.h",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.h",
+              "RelativeDocumentMoniker": "Engine\\Scene\\SceneMain\\SceneMain.h",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneMain\\SceneMain.h",
+              "RelativeToolTip": "Engine\\Scene\\SceneMain\\SceneMain.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-11T06:02:45.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SceneGameOver.cpp",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp",
+              "RelativeDocumentMoniker": "Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp",
+              "RelativeToolTip": "Engine\\Scene\\SceneGameOver\\SceneGameOver.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-11T05:00:33.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAABoAAAAAAAAAAAAYwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-11T05:21:22.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SceneClear.h",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneClear\\SceneClear.h",
+              "RelativeDocumentMoniker": "Engine\\Scene\\SceneClear\\SceneClear.h",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneClear\\SceneClear.h",
+              "RelativeToolTip": "Engine\\Scene\\SceneClear\\SceneClear.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-11T05:06:22.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SceneTitle.cpp",
+              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.cpp",
+              "RelativeDocumentMoniker": "Engine\\Scene\\SceneTitle\\SceneTitle.cpp",
+              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneTitle\\SceneTitle.cpp",
+              "RelativeToolTip": "Engine\\Scene\\SceneTitle\\SceneTitle.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEsAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-11T05:04:55.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Bg.cpp",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Bg\\Bg.cpp",
               "RelativeDocumentMoniker": "Engine\\GameObject\\Bg\\Bg.cpp",
@@ -234,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Bg.h",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\GameObject\\Bg\\Bg.h",
               "RelativeDocumentMoniker": "Engine\\GameObject\\Bg\\Bg.h",
@@ -246,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "SceneGameOver.h",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneGameOver\\SceneGameOver.h",
               "RelativeDocumentMoniker": "Engine\\Scene\\SceneGameOver\\SceneGameOver.h",
@@ -258,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Vec2.h",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\InputDevice\\Vec2.h",
               "RelativeDocumentMoniker": "Engine\\InputDevice\\Vec2.h",
@@ -270,19 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SceneManager.cpp",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneManager\\SceneManager.cpp",
-              "RelativeDocumentMoniker": "Engine\\Scene\\SceneManager\\SceneManager.cpp",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneManager\\SceneManager.cpp",
-              "RelativeToolTip": "Engine\\Scene\\SceneManager\\SceneManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-11T05:21:16.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Pad.h",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\InputDevice\\Pad\\Pad.h",
               "RelativeDocumentMoniker": "Engine\\InputDevice\\Pad\\Pad.h",
@@ -294,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Pad.cpp",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\InputDevice\\Pad\\Pad.cpp",
               "RelativeDocumentMoniker": "Engine\\InputDevice\\Pad\\Pad.cpp",
@@ -306,19 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-11T05:21:22.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "game.h",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\InputDevice\\game.h",
               "RelativeDocumentMoniker": "Engine\\InputDevice\\game.h",
@@ -330,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "SceneManager.h",
               "DocumentMoniker": "C:\\Users\\\u5B89\u85E4 \u6B69\u5922\\Documents\\GitHub\\2weeks_Game\\untitle_Game_temp1\\Engine\\Scene\\SceneManager\\SceneManager.h",
               "RelativeDocumentMoniker": "Engine\\Scene\\SceneManager\\SceneManager.h",

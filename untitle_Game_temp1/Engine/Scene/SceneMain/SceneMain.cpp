@@ -4,6 +4,7 @@
 #include "../../GameObject/Player/player.h"
 #include "../../GameObject/Enemy/enemy.h"
 #include "../../GameObject/Bg/Bg.h"
+#include <cmath>
 
 namespace
 {
@@ -52,9 +53,8 @@ SceneManager::SceneKind SceneMain::Update()
 	// “G‚ÌXVˆ—
 	m_pEnemy->Update();
 
+	HitPlayerEnemy();
 	HitPlayerShot();
-
-
 
 
 	return SceneManager::SceneKind::kSceneMain;
@@ -76,7 +76,7 @@ void SceneMain::HitPlayerShot()
 	float dx = m_pPlayer->ShotGetPosX() - m_pEnemy->EnemyGetPosX();
 	float dy = m_pPlayer->ShotGetPosY() - m_pEnemy->EnemyGetPosY();
 	float distance = sqrtf(dx * dx + dy * dy);
-	if (distance < m_pPlayer->GetShotRadius() + m_pEnemy->GetEnemyRadius())
+	if (distance <= m_pPlayer->GetShotRadius() + m_pEnemy->GetEnemyRadius())
 	{
 		// Õ“Ë‚µ‚½ê‡‚Ìˆ—
 		// ‚±‚±‚ÉÕ“Ë‚Ìˆ—‚ğ’Ç‰Á
@@ -92,7 +92,7 @@ void SceneMain::HitPlayerEnemy()
 	float dx = m_pPlayer->PlayerGetPosX() - m_pEnemy->EnemyGetPosX();
 	float dy = m_pPlayer->PlayerGetPosY() - m_pEnemy->EnemyGetPosY();
 	float distance = sqrtf(dx * dx + dy * dy);
-	if (distance < m_pPlayer->GetPlayerRadius() + m_pEnemy->GetEnemyRadius())
+	if (distance <= m_pPlayer->GetPlayerRadius() + m_pEnemy->GetEnemyRadius())
 	{
 		// Õ“Ë‚µ‚½ê‡‚Ìˆ—
 		// ‚±‚±‚ÉÕ“Ë‚Ìˆ—‚ğ’Ç‰Á

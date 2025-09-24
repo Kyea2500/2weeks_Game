@@ -63,6 +63,9 @@ namespace
 	constexpr int kPlayerLifeMidium = 2;
 	constexpr int kPlayerLifeLow = 1;
 
+	// ダメージを受けたときの点滅フレーム数
+	constexpr int kDamageBlinkFrame = 60;
+
 }
 
 player::player()
@@ -78,7 +81,8 @@ player::player()
 	m_isMove(false), // プレイヤーの移動状態を初期化
 	m_isLastShot(false), // 最後に撃った弾がどれかを初期化
 	m_shotTimer(0), // プレイヤーの射撃タイマーを初期化
-	m_playerLife(kPlayerLifeMax)
+	m_playerLife(kPlayerLifeMax),//プレイヤーの体力を初期化
+	m_blinkFrameCount(0) // 無敵時間の初期化
 {
 	for (int i = 0; i <= MaxShot; i++)
 	{
@@ -169,10 +173,16 @@ void player::End()
 
 void player::Update()
 {
-
 	// 入力状態の更新
 	Pad::Update();
-	
+
+	// 無敵時間の更新
+	m_blinkFrameCount--;
+	if (m_blinkFrameCount < 0)
+	{
+		m_blinkFrameCount = 0;
+	}
+
 	m_animFrame++;
 	int totalAnimeFrame = kAnimeFrameSpeed * kEngineIdleAnimeNum;
 	if (m_isMove)
@@ -207,12 +217,12 @@ void player::Draw()
 
 float player::PlayerGetPosX()
 {
-	return m_pos.x;
+	return m_pos.x - kPlayerImageWidth / half;
 }
 
 float player::PlayerGetPosY()
 {
-	return m_pos.y;
+	return m_pos.y - kPlayerImageHeight / half;
 }
 
 float player::GetPlayerRadius()
@@ -226,7 +236,7 @@ float player::ShotGetPosX()
 	{
 		if (m_isShot[i]==true)
 		{
-			return m_shotPos[i].x;
+			return m_shotPos[i].x - kShotImageWidth / half;
 		}
 	}
 }
@@ -237,20 +247,14 @@ float player::ShotGetPosY()
 	{
 		if (m_isShot[i]==true)
 		{
-			return m_shotPos[i].y;
+			return m_shotPos[i].y - kShotImageHeight / half;
 		}
 	}
 }
 
 float player::GetShotRadius()
 {
-	for(int i=0;i<=MaxShot;i++)
-	{
-		if (m_isShot[i]==true)
-		{
-			return kShotRadius;
-		}
-	}
+	return kShotRadius;
 }
 
 void player::HitShot()
@@ -262,16 +266,24 @@ void player::HitShot()
 			m_shotPos[i] = m_pos; // プレイヤーの位置に戻す
 			m_isShot[i] = false; // 弾が撃たれていない状態にする
 		}
+		// 最初に見つけた弾だけ処理する
+		break;
 	}
 }
 
 void player::Damage()
 {
 	// ダメージを受けたときの処理
+	if (m_blinkFrameCount > 0) return;
+	// 無敵時間(点滅する時間)を設定する
+	m_blinkFrameCount = kDamageBlinkFrame;
 	m_playerLife--;
-
+	if (m_playerLife <= 0)
+	{
+		m_playerLife = 0;
+		// ここに敵が倒されたときの処理を追加
+	}
 }
-
 
 void player::UpdateMove()
 {
@@ -309,6 +321,13 @@ void player::UpdateMove()
 	if (move.Length() > 0.0f)
 	{
 		move.Normalize();
+	}
+
+	// 当たり判定確認用、デバッグモード限定瞬間移動を実装
+	if (Pad::IsPress(PAD_INPUT_B))
+	{
+		move.x *= 20.0f; // 瞬間移動の距離を増やす
+		move.y *= 20.0f; // 瞬間移動の距離を増やす
 	}
 
 	// プレイヤーの位置を更新
@@ -387,14 +406,19 @@ void player::UpdateShot()
 			}
 		}
 	}
-
-	// 弾の連射を
-
-	
 }
 
 void player::DrawPlayer()
 {
+	// 体力を視認できるように
+	DrawFormatString(10, 10, GetColor(255, 255, 255), "Player Life:%d", m_playerLife);
+
+	// プレイヤーの点滅処理
+	if (((int)m_blinkFrameCount / (int)half) % 2 == 1)
+	{
+		return;
+	}
+
 	// 描画処理
 	// プレイヤーの描画処理
 	DrawCircle(m_pos.x, m_pos.y, kPlayerRadius, kPlayerColor, FALSE); // 赤い円を描画
@@ -414,6 +438,8 @@ void player::DrawPlayer()
 		// 円の中心に描画
 		DrawRotaGraph(m_pos.x, m_pos.y, kPlayerScale, kPlayerAngle, m_playerDamage2Handle, TRUE);
 	}
+
+
 	else if (m_playerLife <= 0)
 	{
 		// 円の中心に描画
@@ -423,6 +449,10 @@ void player::DrawPlayer()
 
 void player::DrawEngine()
 {
+	if (((int)m_blinkFrameCount / (int)half) % 2 == 1)
+	{
+		return;
+	}
 	// プレイヤーのアニメーション処理
 	int animeIndex = m_animFrame / kEngineIdleAnimeNum;
 	// 移動中ならエンジンのアニメーションを変更

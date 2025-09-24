@@ -21,16 +21,66 @@ public:
 	float EnemyGetPosY();
 	float GetEnemyRadius();
 
+	// G‹›“G‚Ì“–‚½‚è”»’è
+	float EnemyUnitGetPosX();
+	float EnemyUnitGetPosY();
+	float GetEnemyUnitRadius();
+
+	// ¬‚³‚¢ƒ^ƒCƒv‚ÌG‹›“G‚Ì“–‚½‚è”»’è
+	float EnemyMiniUnitGetPosX();
+	float EnemyMiniUnitGetPosY();
+	float GetEnemyMiniUnitRadius();
+
+	// “G‚ªƒ_ƒ[ƒW‚ğó‚¯‚½‚Æ‚«‚Ìˆ—
 	void EnemysDamage();
+	// G‹›“G‚ªƒ_ƒ[ƒW‚ğó‚¯‚½‚Æ‚«‚Ìˆ—(‹¤’Ê)	
+	void EnemyUnitsDamage();
+
+private:
+	void UpdateEnemy();
+	void UpdateEnemyUnit();
+	void UpdateEnemyMiniUnit();
+
+	void DrawEnemy();
+	void DrawEnemyUnit();
+	void DrawEnemyMiniUnit();
+
+	void UpdateEnemyBullet();
+	void DrawEnemyBullet();
+
 private:
 	// “G‚ÌˆÊ’u
 	Vec2 m_pos;
 	// “G‚Ì‘¬“x
 	int m_speed;
+	// “G‚Ì‰æ‘œ
 	int m_enemyHandle;
-
 	// “G‚Ì‘Ì—Í
 	int m_Life;
+	bool m_isEnemyUnitReleased; // ÅŒã‚Ìè’i‚ÌG‹›“G‚ªˆê“x‚Å‚à•ú‚½‚ê‚½‚©‚Ç‚¤‚©
+
+	// G‹›“G
+	// G‹›“G‚ÌˆÊ’u
+	Vec2 m_enemyUnitPos[2];
+	// G‹›“G‚Ì‰æ‘œ
+	int m_enemyUnitHandle[2];
+	// ¬‚³‚¢ƒ^ƒCƒv‚ÌG‹›“G
+	// ¬‚³‚¢ƒ^ƒCƒv‚ÌG‹›“G‚ÌˆÊ’u
+	Vec2 m_enemyMiniUnitPos[3];
+	// ¬‚³‚¢ƒ^ƒCƒv‚ÌG‹›“G‚Ì‰æ‘œ
+	int m_enemyMiniUnitHandle[3];
+
+	// ’e‚Ì‰æ‘œ
+	int m_enemyBulletHandle[3];
+	// ’e‚ÌˆÊ’u
+	Vec2 m_enemyBulletPos[3];
+	// ’e‚Ì‘¬“x
+	int m_enemyBulletSpeed;
+	// ’e‚ªŒ‚‚½‚ê‚½‚©‚Ç‚¤‚©
+	bool m_isEnemyBullet[3];
+	// ’e‚Ì”­ËŠÔŠuƒ^ƒCƒ}[
+	int m_enemyBulletTimer;
+
 	// –³“GŠÔ‚Ìİ’è
 	int m_blinkFrameCount;
 };
