@@ -1,5 +1,4 @@
 ﻿  enemy.cpp
-  player.cpp
 C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(49,9): warning C4244: '初期化中': 'const float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(80,12): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(228,13): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
@@ -8,49 +7,9 @@ C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\Ga
 C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(276,15): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(326,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(326,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(340,23): error C2065: 'MaxShot': 定義されていない識別子です。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(343,7): error C2065: 'm_isLastShot': 定義されていない識別子です。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(345,8): error C2065: 'm_isShot': 定義されていない識別子です。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(350,4): error C2065: 'm_isShot': 定義されていない識別子です。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(351,4): error C2065: 'm_shotPos': 定義されていない識別子です。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(352,4): error C2065: 'm_isLastShot': 定義されていない識別子です。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(361,3): error C2065: 'm_isLastShot': 定義されていない識別子です。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(365,2): error C2059: 構文エラー: 'else'
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(366,2): error C2143: 構文エラー: ';' が '{' の前にありません。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(366,2): error C2447: '{': 対応する関数ヘッダーがありません (旧形式の仮引数リスト?)
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,3): error C2059: 構文エラー: 'for'
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,17): error C2143: 構文エラー: ')' が ';' の前にありません。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,21): error C2143: 構文エラー: ';' が '<=' の前にありません。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,19): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,21): error C2059: 構文エラー: '<='
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,34): error C2143: 構文エラー: ';' が '++' の前にありません。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,33): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,33): error C2086: 'int i': 再定義されました。
-      C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,19):
-      'i' の宣言を確認してください
-  
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,34): error C2059: 構文エラー: '++'
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(372,36): error C2059: 構文エラー: ')'
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(373,3): error C2143: 構文エラー: ';' が '{' の前にありません。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(373,3): error C2447: '{': 対応する関数ヘッダーがありません (旧形式の仮引数リスト?)
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(387,1): error C2059: 構文エラー: '}'
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(387,1): error C2143: 構文エラー: ';' が '}' の前にありません。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(390,1): error C2143: 構文エラー: ';' が '{' の前にありません。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(390,1): error C2447: '{': 対応する関数ヘッダーがありません (旧形式の仮引数リスト?)
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(207,17): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(424,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(424,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(429,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(429,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(434,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(434,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(439,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(439,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(446,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(446,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(488,43): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(488,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  SceneMain.cpp
-  コードを生成中...
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(253,1): warning C4715: 'player::ShotGetPosY': 値を返さないコントロール パスがあります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Player\player.cpp(242,1): warning C4715: 'player::ShotGetPosX': 値を返さないコントロール パスがあります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(340,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(340,53): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(340,32): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(356,61): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(356,36): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  untitle_Game_temp1.vcxproj -> C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\x64\Debug\untitle_Game_temp1.exe

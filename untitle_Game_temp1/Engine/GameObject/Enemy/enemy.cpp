@@ -299,10 +299,10 @@ void enemy::UpdateEnemyMiniUnit()
 
 		// 放たれた小さいタイプの雑魚敵は左に移動する
 		m_enemyMiniUnitPos[i].x -= m_speed;
-		// 画面の左端に到達したら消える
+		// 画面外に出たら位置をリセット
 		if (m_enemyMiniUnitPos[i].x < -kEnemyRadius)
 		{
-			m_enemyMiniUnitPos[i].x = Game::kScreenWidth + kEnemyRadius; // 画面の右端に戻す
+			m_enemyMiniUnitPos[i] = Vec2(0.0f, 0.0f); // 位置をリセット
 		}
 
 	}
@@ -328,10 +328,34 @@ void enemy::DrawEnemy()
 
 void enemy::DrawEnemyUnit()
 {
+	// 雑魚敵の描画処理
+	for (int i = 0; i <= kEnrmyUnitMax; i++)
+	{
+		if (m_enemyUnitPos[i].x != 0.0f && m_enemyUnitPos[i].y != 0.0f)
+		{
+			// 円の中心に描画
+			DrawRectRotaGraph(static_cast<int>(m_enemyUnitPos[i].x), static_cast<int>(m_enemyUnitPos[i].y),
+				0, 0, kEnemyUnitGraphWidth, kEnemyUnitGraphHeight, kEnemyScale, 0.0, m_enemyUnitHandle[i], TRUE);
+			// 雑魚敵の描画処理
+			DrawCircle(m_enemyUnitPos[i].x, m_enemyUnitPos[i].y, kEnemyRadius / half,0xffff25, FALSE);//黄色い円で描画
+		}
+	}
 }
 
 void enemy::DrawEnemyMiniUnit()
 {
+	// 小さいタイプの雑魚敵の描画処理
+	for (int i = 0; i <= kEnemyMiniUnitMax; i++)
+	{
+		if (m_enemyMiniUnitPos[i].x != 0.0f && m_enemyMiniUnitPos[i].y != 0.0f)
+		{
+			// 円の中心に描画
+			DrawRectRotaGraph(static_cast<int>(m_enemyMiniUnitPos[i].x), static_cast<int>(m_enemyMiniUnitPos[i].y),
+				0, 0, kEnemyMiniUnitGraphWidth, kEnemyMiniUnitGraphHeight, kEnemyScale, 0.0, m_enemyMiniUnitHandle[i], TRUE);
+			// 小さいタイプの雑魚敵の描画処理
+			DrawCircle(m_enemyMiniUnitPos[i].x, m_enemyMiniUnitPos[i].y, kEnemyRadius / 4, kEnemyColor, FALSE); // 青い円を描画
+		}
+	}
 }
 
 void enemy::UpdateEnemyBullet()
