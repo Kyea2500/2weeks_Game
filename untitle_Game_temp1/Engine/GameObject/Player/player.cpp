@@ -9,7 +9,11 @@ namespace
 	constexpr float kInitialPosX = 320.0f;
 	constexpr float kInitialPosY = 240.0f;
 	// プレイヤーの移動速度
-	constexpr float kPlayerSpeed = 1024.0f;
+	constexpr float kPlayerSpeed = 100.0f;
+	constexpr float kEngineBoost = 5.0f;
+
+	// プレイヤーのデッドスピード
+	constexpr float kPlayerDeadSpeed = 2.0f;
 
 	// プレイヤーの半径
 	constexpr int kPlayerRadius = 20;
@@ -22,8 +26,12 @@ namespace
 	constexpr int kEngineIdleAnimeNum = 2;
 	constexpr int kEngineMoveAnimeNum = 3;
 
+	// 爆発のアニメーションのコマ数
+	constexpr int kExplosionAnimeNum = 8;
+
 	// アニメーションフレーム速度
 	constexpr int kAnimeFrameSpeed = 5;
+	constexpr int kExplosionFrameSpeed = 8;
 
 	// プレイヤーの画像サイズ
 	constexpr int kPlayerImageWidth = 48;
@@ -66,6 +74,16 @@ namespace
 	// ダメージを受けたときの点滅フレーム数
 	constexpr int kDamageBlinkFrame = 60;
 
+	// 爆発のサイズ
+	constexpr int kExplosionSize = 32;
+
+	// バリアのサイズ
+	constexpr int kBarrierSize = 88;
+	constexpr int kBarrierRadius = 40;
+
+	// バリアの使用回数
+	constexpr int kBarrierMaxCount = 3;
+	constexpr float kBarrierBlinkFrame = 60.0f; // バリアの無敵時間
 }
 
 player::player()
@@ -77,12 +95,20 @@ player::player()
 	m_playerDeadHandle(-1), // プレイヤーの死亡画像ハンドルを初期化
 	m_engineHandleIdle(-1), // エンジン部分の画像ハンドルを初期化
 	m_engineHandleMove(-1), // エンジン部分の移動中画像ハンドルを初期化
+	m_explosionHandle(-1), // 爆発エフェクトの画像ハンドルを初期化
+	m_barrierHandle(-1), // バリアの画像ハンドルを初期化
 	m_animFrame(0), // アニメーションフレームを初期化
+	m_explosionAnimFrame(0), // 爆発エフェクトのアニメーションフレームを初期化
 	m_isMove(false), // プレイヤーの移動状態を初期化
 	m_isLastShot(false), // 最後に撃った弾がどれかを初期化
+	m_isDead(false), // プレイヤーの死亡状態を初期化
+	m_isBarrier(false), // バリアの状態を初期化
+	m_isBarrierHit(false), // バリアで攻撃を防いだかどうかを初期化
 	m_shotTimer(0), // プレイヤーの射撃タイマーを初期化
 	m_playerLife(kPlayerLifeMax),//プレイヤーの体力を初期化
-	m_blinkFrameCount(0) // 無敵時間の初期化
+	m_blinkFrameCount(0), // 無敵時間の初期化
+	m_barrierCount(3), // バリアの使用回数を初期化
+	m_barrierBlinkFrameCount(kBarrierBlinkFrame) // バリアの無敵時間の初期化
 {
 	for (int i = 0; i <= MaxShot; i++)
 	{
@@ -109,6 +135,12 @@ void player::Init()
 	// エンジン部分の画像を読み込む
 	m_engineHandleIdle = LoadGraph("Date/Effects/Player_IdleEngine.png");
 	m_engineHandleMove = LoadGraph("Date/Effects/Player_MoveingEngine.png");
+
+	// 爆発エフェクトの画像を読み込む
+	m_explosionHandle = LoadGraph("Date/Effects/explosion.png");
+
+	// バリアの画像を読み込む
+	m_barrierHandle = LoadGraph("Date/Effects/Barrier2.png");
 
 	m_animFrame = 0; // アニメーションフレームを初期化
 	m_isMove = false; // プレイヤーの移動状態を初期化
@@ -173,16 +205,7 @@ void player::End()
 
 void player::Update()
 {
-	// 入力状態の更新
-	Pad::Update();
-
-	// 無敵時間の更新
-	m_blinkFrameCount--;
-	if (m_blinkFrameCount < 0)
-	{
-		m_blinkFrameCount = 0;
-	}
-
+	// アニメーションフレームの更新
 	m_animFrame++;
 	int totalAnimeFrame = kAnimeFrameSpeed * kEngineIdleAnimeNum;
 	if (m_isMove)
@@ -191,28 +214,70 @@ void player::Update()
 	}
 
 	// アニメーションフレームをループさせる
-	if(m_animFrame >= totalAnimeFrame)
+	if (m_animFrame >= totalAnimeFrame)
 	{
 		m_animFrame = 0;
 	}
 
-	// プレイヤーの更新処理
-	UpdateMove();
-	// プレイヤーの射撃処理
-	m_shotTimer++;
-	// ゲームスタートと同時に弾が出ないようにタイマーを置く
-	if (m_shotTimer>= kShotTimerMax)
+	
+
+
+	if (m_playerLife>0)
 	{
-		UpdateShot();
-		m_shotTimer = kShotTimerMax; // タイマーが増えすぎないように抑制
+		// 入力状態の更新
+		Pad::Update();
+
+		// 無敵時間の更新
+		m_blinkFrameCount--;
+		if (m_blinkFrameCount < 0)
+		{
+			m_blinkFrameCount = 0;
+		}
+		
+		// プレイヤーの更新処理
+		UpdateMove();
+		// プレイヤーの射撃処理
+		m_shotTimer++;
+		// ゲームスタートと同時に弾が出ないようにタイマーを置く
+		if (m_shotTimer >= kShotTimerMax)
+		{
+			UpdateShot();
+			m_shotTimer = kShotTimerMax; // タイマーが増えすぎないように抑制
+		}
+
+		// バリアの更新処理
+		UpdateBarrier();
+
+		if (Pad::IsPress(PAD_INPUT_3))
+		{
+			m_playerLife = 0; // デバッグ用に体力を0にする
+		}
+
+
+	}
+	if (m_playerLife <= 0)
+	{
+		UpdateDead();
+		// 爆発エフェクトのアニメーションフレームの更新
+		m_explosionAnimFrame++;
+		int explosionTotalAnimeFrame = kAnimeFrameSpeed * kExplosionAnimeNum;
+		
 	}
 }
 
 void player::Draw()
 {
 	DrawPlayer();
-	DrawEngine();
-	DrawShot();
+	if (m_playerLife > 0)
+	{
+		DrawEngine();
+		DrawShot();
+		DrawBarrier();
+	}
+	if (m_playerLife <= 0)
+	{
+		DrawDead();
+	}
 }
 
 float player::PlayerGetPosX()
@@ -275,13 +340,27 @@ void player::Damage()
 {
 	// ダメージを受けたときの処理
 	if (m_blinkFrameCount > 0) return;
+
+	if(m_isBarrier)
+	{
+		// バリアが有効な場合、ダメージを防ぐ
+		m_isBarrierHit = true; // バリアで攻撃を防いだことを記録
+		m_isBarrier = false; // バリアを無効化
+		m_barrierBlinkFrameCount = 0; // バリアの無敵時間をリセット
+		m_barrierCount = 0;	// バリアの使用回数を0にする(つまり一度だけ)
+		// 防ぐのに成功した場合、ダメージを食らわずに無敵時間が発生する
+		// ただし、無敵時間は半分になる
+		m_blinkFrameCount = kDamageBlinkFrame/half;
+
+		return;
+	}
 	// 無敵時間(点滅する時間)を設定する
 	m_blinkFrameCount = kDamageBlinkFrame;
+	// 体力を1減らす
 	m_playerLife--;
 	if (m_playerLife <= 0)
 	{
 		m_playerLife = 0;
-		// ここに敵が倒されたときの処理を追加
 	}
 }
 
@@ -291,6 +370,8 @@ void player::UpdateMove()
 	// 移動ベクトルを初期化
 	Vec2 move(0.0f, 0.0f);
 	m_isMove = false;
+	move.x = 0.0f;
+	move.y = 0.0f;
 
 	// プレイヤーの移動方向の向きを初期化
 	if (Pad::IsPress(PAD_INPUT_LEFT))
@@ -323,12 +404,8 @@ void player::UpdateMove()
 		move.Normalize();
 	}
 
-	// 当たり判定確認用、デバッグモード限定瞬間移動を実装
-	if (Pad::IsPress(PAD_INPUT_B))
-	{
-		move.x *= 20.0f; // 瞬間移動の距離を増やす
-		move.y *= 20.0f; // 瞬間移動の距離を増やす
-	}
+	move.x *= kEngineBoost; // 瞬間移動の距離を増やす
+	move.y *= kEngineBoost; // 瞬間移動の距離を増やす
 
 	// プレイヤーの位置を更新
 	m_pos += move;
@@ -350,6 +427,8 @@ void player::UpdateMove()
 	{
 		m_pos.y = Game::kScreenHeight - kPlayerImageHeight / half;
 	}
+
+
 
 }
 
@@ -406,6 +485,33 @@ void player::UpdateShot()
 			}
 		}
 	}
+}
+
+void player::UpdateBarrier()
+{
+	// バリアの更新処理
+	// バリアが有効な場合、無敵時間をカウントダウン
+	if (m_isBarrier)
+	{
+		m_barrierBlinkFrameCount--;
+		// バリアは時間切れの時に解除される
+		if (m_barrierBlinkFrameCount <= 0)
+		{
+			m_isBarrier = false; // バリアを無効化
+			m_barrierBlinkFrameCount = kBarrierBlinkFrame; // バリアの無敵時間をリセット
+		}
+	}
+	// バリアの使用処理
+	if (Pad::IsPress(PAD_INPUT_4))
+	{
+		// バリアが使用可能で、バリアがゲーム中に一度でも防いでおらず、バリアが有効でない場合にバリアを有効化
+		if (m_barrierCount > 0&&m_isBarrier == false)
+		{
+			m_isBarrier = true; // バリアを有効化
+			m_barrierCount--; // バリアの使用回数を減らす
+		}
+	}
+
 }
 
 void player::DrawPlayer()
@@ -493,3 +599,100 @@ void player::DrawShot()
 		}
 	}
 }
+
+void player::DrawBarrier()
+{
+	// バリアの使用回数を視認できるように
+	if (m_barrierCount > 0)
+	{
+		DrawFormatString(10, 50, GetColor(255, 255, 255), "バリアは残り%d回まで使用可能", m_barrierCount);
+	}
+
+	// バリアが使用できない場合の表示
+	if(m_barrierCount==0&&m_isBarrierHit==false)
+	{
+		DrawFormatString(10, 50, GetColor(255, 255, 255), "バリアを使い切りました。バリアを使用できません");
+	}
+
+	// バリアが攻撃を防いだ場合の表示
+	if (m_isBarrierHit)
+	{
+		DrawFormatString(10, 50, GetColor(255, 255, 255), "バリアで攻撃を防ぎました。バリアを使用できません。");
+	}
+
+	// バリアを使用中の表示処理
+	if(m_isBarrier&&m_isBarrierHit==false)
+	{
+		DrawFormatString(10, 70, GetColor(255, 255, 255), "バリア展開");
+	}
+
+
+	// バリアの描画処理
+	if (m_isBarrier)
+	{
+		// バリアの点滅処理
+		if (((int)m_barrierBlinkFrameCount / (int)half) % 2 == 1)
+		{
+			return;
+		}
+		// バリアの画像を描画
+		if (m_barrierHandle != -1)
+		{
+			DrawRectRotaGraph(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y),
+				0, 0, kBarrierSize, kBarrierSize, 1.5, 0.0f,
+				m_barrierHandle, TRUE);
+		}
+		// バリアの当たり判定を描画
+		DrawCircle(m_pos.x, m_pos.y, kBarrierRadius, 0x00ffff, FALSE); // 水色の円を描画
+	}
+}
+
+void player::UpdateDead()
+{
+	// 発射されている弾はすべてリセット
+	for (int i = 0; i <= MaxShot; i++)
+	{
+		if (m_isShot[i] == true)
+		{
+			m_shotPos[i] = m_pos; // プレイヤーの位置に戻す
+			m_isShot[i] = false; // 弾が撃たれていない状態にする
+		}
+	}
+
+	// プレイヤーの移動処理
+	Vec2 move(0.0f, 0.0f);
+	move.x -= kSpeed; // 左に移動
+	move.y += kSpeed; // 下に移動
+	// 移動ベクトルを正規化
+	if (move.Length() > 0.0f)
+	{
+		move.Normalize();
+	}
+	move.x *= kEngineBoost; // 瞬間移動の距離を増やす
+	move.y *= kEngineBoost; // 瞬間移動の距離を増やす
+
+	// プレイヤーの位置を更新
+	m_pos += move;
+	if (m_pos.x < -kPlayerImageWidth || m_pos.y > Game::kScreenHeight + kPlayerImageHeight)
+	{
+		// 画面外に出たら死亡状態をtrueにする
+		m_isDead = true;
+	}
+}
+
+void player::DrawDead()
+{
+	// プレイヤーが死亡したことを表示
+	DrawFormatString(10, 50, GetColor(255, 255, 255), "撃墜されてしまいました");
+	// 爆発のアニメーション処理
+	int animeIndex = m_explosionAnimFrame / kExplosionAnimeNum;
+	// プレイヤーの位置に爆発ハンドルを描画
+	if (m_explosionHandle != -1)
+	{
+		DrawRectRotaGraph(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y),
+			animeIndex * kExplosionSize, 0, kExplosionSize, kExplosionSize, kPlayerScale, 0.0, m_explosionHandle, TRUE);
+	}
+	
+}
+
+

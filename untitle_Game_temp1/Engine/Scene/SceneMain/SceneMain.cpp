@@ -56,6 +56,20 @@ SceneManager::SceneKind SceneMain::Update()
 	HitPlayerEnemy();
 	HitPlayerShot();
 
+	// プレイヤーの体力が0以下ならゲームオーバーへ
+	if(m_pPlayer->GatPlayerDead()==true)
+	{
+		// シーンをゲームオーバーに変更
+		return SceneManager::SceneKind::kSceneGameOver;
+	}
+
+
+	// 敵の体力が0以下ならゲームクリアへ
+	if(m_pEnemy->GetEnemyDead()==true)
+	{
+		// シーンをゲームクリアに変更
+		return SceneManager::SceneKind::kSceneGameClear;
+	}
 
 	return SceneManager::SceneKind::kSceneMain;
 

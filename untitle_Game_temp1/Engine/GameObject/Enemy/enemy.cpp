@@ -50,7 +50,11 @@ enemy::enemy() :m_pos(0.0f,0.0f),
 	m_enemyHandle(-1),
 	m_Life(kEnemyLife),
 	m_blinkFrameCount(0),
-	m_isEnemyUnitReleased(false)
+	m_isEnemyUnitReleased(false),
+	m_enemyBulletSpeed(10),
+	m_enemyBulletTimer(0),
+	m_Dead(false),
+	m_isDeadUpOnce(false)
 {
 	for (int i = 0; i <= kEnrmyUnitMax; i++)
 	{
@@ -129,9 +133,19 @@ void enemy::End()
 
 void enemy::Update()
 {
-	UpdateEnemy();
-	UpdateEnemyUnit();
-	UpdateEnemyMiniUnit();
+	if (m_Life > 0)
+	{
+		UpdateEnemy();
+		UpdateEnemyUnit();
+		UpdateEnemyMiniUnit();
+		UpdateEnemyBullet();
+	}
+
+	// “G‚Ì‘Ì—Í‚ª0ˆÈ‰º‚È‚ç“|‚³‚ê‚½‚±‚Æ‚É‚·‚é
+	if (m_Life <= 0)
+	{
+		UpdateDead();
+	}
 }
 
 void enemy::Draw()
@@ -197,6 +211,9 @@ void enemy::EnemysDamage()
 	// –³“GŠÔ(“_–Å‚·‚éŠÔ)‚ğİ’è‚·‚é
 	m_blinkFrameCount = kDamageBlinkFrame;
 	m_Life--;
+	// ¬‚³‚¢ƒ^ƒCƒv‚ÌG‹›“G‚ğ•ú‚Â
+	UpdateEnemyMiniUnit();
+
 	if (m_Life <= 0)
 	{
 		m_Life = 0;
@@ -208,7 +225,6 @@ void enemy::EnemysDamage()
 void enemy::EnemyUnitsDamage()
 {
 }
-
 
 // “G(Boss)‚ÌXVˆ—
 void enemy::UpdateEnemy()
@@ -264,6 +280,10 @@ void enemy::UpdateEnemyUnit()
 		// Boss‚Ì‘O‚Ü‚Å—ˆ‚½‚çã‰º‚ÉˆÚ“®‚·‚é
 		if (m_enemyUnitPos[i].x < m_pos.x)
 		{
+			m_enemyUnitPos[i].x = m_pos.x- kEnemyUnitGraphWidth; // Boss‚Ì‘O‚Å~‚Ü‚é
+
+
+			// Boss‚Æ“¯‚¶‚æ‚¤‚Éã‰º‚ÉˆÚ“®‚·‚é
 			m_enemyUnitPos[i].y -= m_speed;
 			// ‰æ–Ê‚Ìã’[‚É“’B‚µ‚½‚ç‰º‚ÉˆÚ“®
 			if (m_enemyUnitPos[i].y > Game::kScreenHeight - kEnemyRadius)
@@ -347,14 +367,11 @@ void enemy::DrawEnemyMiniUnit()
 	// ¬‚³‚¢ƒ^ƒCƒv‚ÌG‹›“G‚Ì•`‰æˆ—
 	for (int i = 0; i <= kEnemyMiniUnitMax; i++)
 	{
-		if (m_enemyMiniUnitPos[i].x != 0.0f && m_enemyMiniUnitPos[i].y != 0.0f)
-		{
 			// ‰~‚Ì’†S‚É•`‰æ
 			DrawRectRotaGraph(static_cast<int>(m_enemyMiniUnitPos[i].x), static_cast<int>(m_enemyMiniUnitPos[i].y),
 				0, 0, kEnemyMiniUnitGraphWidth, kEnemyMiniUnitGraphHeight, kEnemyScale, 0.0, m_enemyMiniUnitHandle[i], TRUE);
 			// ¬‚³‚¢ƒ^ƒCƒv‚ÌG‹›“G‚Ì•`‰æˆ—
 			DrawCircle(m_enemyMiniUnitPos[i].x, m_enemyMiniUnitPos[i].y, kEnemyRadius / 4, kEnemyColor, FALSE); // Â‚¢‰~‚ğ•`‰æ
-		}
 	}
 }
 
@@ -393,4 +410,44 @@ void enemy::UpdateEnemyBullet()
 
 void enemy::DrawEnemyBullet()
 {
+}
+
+void enemy::UpdateDead()
+{
+	// “G‚Í“|‚³‚ê‚½‚Æ‚µ‚Ä‚àA“|‚³‚ê‚Ä‚¢‚È‚¢ó‘Ô‚Ì‚Æ“¯‚¶‚­Aã‰º‚ÉˆÚ“®‚·‚é‚ª
+	// ˆê“x‚¾‚¯ã‚És‚Á‚½Œã‚É‰º‚És‚«A‰æ–ÊŠO‚ÖÁ‚¦‚é
+	m_pos.y += m_speed;
+	if (m_isDeadUpOnce == false)
+	{
+		// ‰æ–Ê‚Ìã’[‚É“’B‚µ‚½‚ç‰º‚ÉˆÚ“®
+		if (m_pos.y > Game::kScreenHeight - kEnemyRadius)
+		{
+			m_speed = -kEnemySpeed; // ‘¬“x‚ğ”½“]‚µ‚Äã‚ÉˆÚ“®
+		}
+		
+		if (m_pos.y < kEnemyRadius)
+		{
+			m_speed = kEnemySpeed; // ‘¬“x‚ğ”½“]‚µ‚Ä‰º‚ÉˆÚ“®
+			m_isDeadUpOnce = true; // ˆê“xã‚És‚Á‚½‚±‚Æ‚ğ‹L˜^
+		}
+	}
+	if (m_isDeadUpOnce == true)
+	{
+		// ‰æ–Ê‚Ìã‘¤‚É“’B‚µ‚½‚ç‰º‚ÉˆÚ“®
+		if (m_pos.y < kEnemyRadius)
+		{
+			m_speed = kEnemySpeed; // ‘¬“x‚ğ”½“]‚µ‚Ä‰º‚ÉˆÚ“®
+		}
+
+		// ‰æ–Ê‚Ì‰º’[‚É“’B‚µ‚½‚ç“G‚Í€‚Ê
+		if (m_pos.y > Game::kScreenHeight + kEnemyRadius)
+		{
+			m_Dead = true; // “G‚ª€‚ñ‚¾‚±‚Æ‚ğ‹L˜^
+		}
+	}
+
+}
+void enemy::DrawDead()
+{
+
 }

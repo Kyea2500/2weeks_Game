@@ -10,6 +10,11 @@ public:
 	SceneManager::SceneKind Update();
 	void Draw();
 private:
-
+	
 };
+
+
+
+
+
 

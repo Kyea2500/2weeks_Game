@@ -2,13 +2,15 @@
 #include "../SceneTitle/SceneTitle.h"
 #include "../SceneMain/SceneMain.h"
 #include "../SceneGameOver/SceneGameOver.h"
+#include "../SceneClear/SceneClear.h"
 #include "../../InputDevice/Pad/Pad.h"
 
 SceneManager::SceneManager() :
 	m_Kind(kSceneTitle), // 初期シーンをタイトルに設定
 	m_pSceneTitle(nullptr), // タイトルシーンのポインタを初期化
 	m_pSceneMain(nullptr),  // メインシーンのポインタを初期化
-	m_pSceneGameOver(nullptr) // ゲームオーバーシーンのポインタを初期化
+	m_pSceneGameOver(nullptr), // ゲームオーバーシーンのポインタを初期化
+	m_pSceneClear(nullptr)
 {
 }
 
@@ -30,6 +32,11 @@ SceneManager::~SceneManager()
 		m_pSceneGameOver = nullptr;
 		delete m_pSceneGameOver;
 	}
+	else if (m_pSceneClear != nullptr)
+	{
+		m_pSceneClear = nullptr;
+		delete m_pSceneClear;
+	}
 }
 
 void SceneManager::Init()
@@ -48,6 +55,10 @@ void SceneManager::Init()
 	case SceneKind::kSceneGameOver:
 		m_pSceneGameOver = new SceneGameOver();
 		m_pSceneGameOver->Init();
+		break;
+	case SceneKind::kSceneGameClear:
+		m_pSceneClear = new SceneClear();
+		m_pSceneClear->Init();
 		break;
 	default:
 		break;
@@ -73,6 +84,11 @@ void SceneManager::End()
 		delete m_pSceneGameOver;
 		m_pSceneGameOver = nullptr;
 		break;
+	case SceneKind::kSceneGameClear:
+		m_pSceneClear->End();
+		delete m_pSceneClear;
+		m_pSceneClear = nullptr;
+		break;
 	default:
 		break;
 	}
@@ -94,7 +110,9 @@ void SceneManager::Update()
 	case SceneKind::kSceneGameOver:
 		nextKind = m_pSceneGameOver->Update();
 		break;
-
+	case SceneKind::kSceneGameClear:
+		nextKind = m_pSceneClear->Update();
+		break;
 	default:
 		break;
 	}
@@ -124,6 +142,9 @@ void SceneManager::Draw()
 		break;
 	case SceneKind::kSceneGameOver:
 		m_pSceneGameOver->Draw();
+		break;
+	case SceneKind::kSceneGameClear:
+		m_pSceneClear->Draw();
 		break;
 	default:
 		break;

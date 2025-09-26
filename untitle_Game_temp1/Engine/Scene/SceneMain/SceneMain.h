@@ -21,5 +21,4 @@ private:
 	std::shared_ptr<player> m_pPlayer;
 	std::shared_ptr<enemy> m_pEnemy;
 	std::shared_ptr<Bg> m_pBg;
-private:
 };

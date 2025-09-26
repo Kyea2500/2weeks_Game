@@ -31,13 +31,20 @@ public:
 	void HitShot();
 	void Damage();
 
+	bool GatPlayerDead() { return  m_isDead; }
+
 private:
 	void UpdateMove();
 	void UpdateShot();
+	void UpdateBarrier();
 
 	void DrawPlayer();
 	void DrawEngine();
 	void DrawShot();
+	void DrawBarrier();
+
+	void UpdateDead();
+	void DrawDead();
 
 private:
 	// プレイヤーの座標
@@ -51,8 +58,14 @@ private:
 	int m_engineHandleIdle;
 	int m_engineHandleMove;
 
+	int m_explosionHandle; // 爆発エフェクトの画像ハンドル
+
+	// バリアの画像ハンドル
+	int m_barrierHandle;
+
 	// アニメーション関連
 	int m_animFrame; // フレーム数を数える
+	int m_explosionAnimFrame; // 爆発エフェクトのアニメーションフレーム数
 
 	// プレイヤーの移動速度
 	float speed;
@@ -72,7 +85,17 @@ private:
 
 	// プレイヤーのHP
 	int m_playerLife;
+	bool m_isDead; // プレイヤーが死んでいるかどうか
 
 	// 無敵時間の設定
 	int m_blinkFrameCount;
+
+	// バリアの有無
+	bool m_isBarrier;
+	// バリアの使用回数
+	int m_barrierCount;
+	// バリアの無敵時間
+	float m_barrierBlinkFrameCount;
+	// バリアで攻撃を防いだかどうか
+	bool m_isBarrierHit;
 };

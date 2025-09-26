@@ -3,6 +3,7 @@
 class SceneTitle;
 class SceneMain;
 class SceneGameOver;
+class SceneClear;
 class SceneManager
 {
 public:
@@ -26,6 +27,6 @@ public:
 		SceneTitle* m_pSceneTitle;
 		SceneMain* m_pSceneMain;
 		SceneGameOver* m_pSceneGameOver;
-
+		SceneClear* m_pSceneClear;
 };
 

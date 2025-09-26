@@ -36,6 +36,10 @@ public:
 	// G‹›“G‚ªƒ_ƒ[ƒW‚ğó‚¯‚½‚Æ‚«‚Ìˆ—(‹¤’Ê)	
 	void EnemyUnitsDamage();
 
+	// bosus‚Ì‘Ì—Í‚ğæ“¾
+	int GetEnemyLife() { return m_Life; }
+	bool GetEnemyDead() { return m_Dead; }
+
 private:
 	void UpdateEnemy();
 	void UpdateEnemyUnit();
@@ -47,6 +51,9 @@ private:
 
 	void UpdateEnemyBullet();
 	void DrawEnemyBullet();
+
+	void UpdateDead();
+	void DrawDead();
 
 private:
 	// “G‚ÌˆÊ’u
@@ -83,4 +90,8 @@ private:
 
 	// –³“GŠÔ‚Ìİ’è
 	int m_blinkFrameCount;
+
+	bool m_Dead; // “G‚ª€‚ñ‚Å‚¢‚é‚©‚Ç‚¤‚©
+	// “G‚ª€‚ñ‚¾Œã‚Éˆê“xã‚ÉŒü‚©‚Á‚½‚©
+	bool m_isDeadUpOnce;
 };
