@@ -1,5 +1,5 @@
 #include "player.h"
-#include "DxLib.h"
+#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "../../InputDevice/game.h"
 #include "../../InputDevice/Pad/Pad.h"
 
@@ -260,7 +260,7 @@ void player::Update()
 		UpdateDead();
 		// 爆発エフェクトのアニメーションフレームの更新
 		m_explosionAnimFrame++;
-		int explosionTotalAnimeFrame = kAnimeFrameSpeed * kExplosionAnimeNum;
+		int explosionTotalAnimeFrame = kExplosionFrameSpeed * kExplosionAnimeNum;
 		
 	}
 }

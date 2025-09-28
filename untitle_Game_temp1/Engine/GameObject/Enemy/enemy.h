@@ -77,6 +77,12 @@ private:
 	// 小さいタイプの雑魚敵の画像
 	int m_enemyMiniUnitHandle[3];
 
+	// 爆発
+	int m_explosionHandle; // 爆発エフェクトの画像ハンドル
+
+	// 爆発のアニメーションフレーム
+	int m_explosionAnimFrame;
+
 	// 弾の画像
 	int m_enemyBulletHandle[3];
 	// 弾の位置

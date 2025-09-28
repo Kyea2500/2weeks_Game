@@ -1,5 +1,5 @@
 #include "Map.h"
-#include "DxLib.h"
+#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 
 Map::Map(): m_Width(0),
 	m_Height(0), 

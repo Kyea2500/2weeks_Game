@@ -1,5 +1,5 @@
 #include "SceneClear.h"
-#include "DxLib.h"
+#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "../../InputDevice/game.h"
 #include "../../InputDevice/Pad/Pad.h"
 
@@ -20,16 +20,18 @@ SceneManager::SceneKind SceneClear::Update()
 {
 	// 入力状態の更新
 	Pad::Update();
-	if (Pad::IsTrigger(PAD_INPUT_1))
+	if (Pad::IsPress(PAD_INPUT_1))
 	{
 		// タイトルへ
 		return SceneManager::SceneKind::kSceneTitle;
 	}
-	if (Pad::IsTrigger(PAD_INPUT_2))
+	if (Pad::IsPress(PAD_INPUT_2))
 	{
 		// 終了
 		PostQuitMessage(0);
 	}
+
+	// なぜかうまく移行ができない
 	// ゲームクリアシーンの更新処理
 	return SceneManager::SceneKind::kSceneGameClear;
 }

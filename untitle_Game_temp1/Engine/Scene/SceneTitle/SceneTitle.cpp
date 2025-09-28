@@ -1,5 +1,5 @@
 #include "SceneTitle.h"
-#include "DxLib.h"
+#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "../../InputDevice/Pad/Pad.h"
 
 namespace

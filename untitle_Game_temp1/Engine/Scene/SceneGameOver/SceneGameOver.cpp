@@ -1,5 +1,5 @@
 #include "SceneGameOver.h"
-#include "DxLib.h"
+#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "../../InputDevice/game.h"
 #include "../../InputDevice/Pad/Pad.h"
 
@@ -24,17 +24,17 @@ SceneManager::SceneKind SceneGameOver::Update()
 	// 入力状態の更新
 	Pad::Update();
 	
-	if (Pad::IsTrigger(PAD_INPUT_1))
+	if (Pad::IsPress(PAD_INPUT_1))
 	{
 		// 続ける
 		return SceneManager::SceneKind::kSceneMain;
 	}
-	if (Pad::IsTrigger(PAD_INPUT_2))
+	if (Pad::IsPress(PAD_INPUT_2))
 	{
 		// タイトルへ
 		return SceneManager::SceneKind::kSceneTitle;
 	}
-	if (Pad::IsTrigger(PAD_INPUT_3))
+	if (Pad::IsPress(PAD_INPUT_3))
 	{
 		// 終了
 		PostQuitMessage(0);

@@ -1,5 +1,5 @@
 #include "Bg.h"
-#include "DxLib.h"
+#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "../../InputDevice/game.h"
 
 namespace 

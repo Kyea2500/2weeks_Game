@@ -1,5 +1,5 @@
 #include "enemy.h"
-#include "DxLib.h"
+#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "../../InputDevice/game.h"
 namespace
 	{
@@ -28,19 +28,26 @@ namespace
 	constexpr int kEnemyMiniUnitGraphHeight = 32;
 
 	// 敵の拡大率
-	constexpr double kEnemyScale = 2.0;
+	constexpr double  kEnemyScale = 2.0;
 
 	// 敵の体力
 	constexpr int kEnemyLife = 30;
 	// ダメージを受けたときの点滅フレーム数
 	constexpr int kDamageBlinkFrame = 60;
-
+ 
 	// 雑魚敵の数はそれぞれ異なる
 	constexpr int kEnrmyUnitMax = 2;
 	constexpr int kEnemyMiniUnitMax = 3;
 
 	// 弾の最大数
 	constexpr int kEnemyBulletMax = 20;
+
+	// 爆発のアニメーションのコマ数
+	constexpr int kExplosionAnimeNum = 8;
+	constexpr int kExplosionFrameSpeed = 8;
+	// 爆発のサイズ
+	constexpr int kExplosionSize = 32;
+
 
 
 
@@ -144,6 +151,9 @@ void enemy::Update()
 	// 敵の体力が0以下なら倒されたことにする
 	if (m_Life <= 0)
 	{
+		// 爆発エフェクトのアニメーションフレームの更新
+		m_explosionAnimFrame++;
+		int explosionTotalAnimeFrame = kExplosionFrameSpeed * kExplosionAnimeNum;
 		UpdateDead();
 	}
 }
@@ -449,5 +459,15 @@ void enemy::UpdateDead()
 }
 void enemy::DrawDead()
 {
+	if (m_Life <= 0)
+	{
+		int animeIndex = m_explosionAnimFrame / kExplosionAnimeNum;
+
+		if (m_explosionHandle != -1)
+		{
+			DrawRectRotaGraph(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y),
+				animeIndex * kExplosionSize, 0, kExplosionSize, kExplosionSize, kEnemyScale, 0.0, m_explosionHandle, TRUE);
+		}
+	}
 
 }
