@@ -1,4 +1,4 @@
-#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
+#include "../untitle_Game_temp1/プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "Engine/InputDevice/game.h"
 #include"Engine/Scene/SceneManager/SceneManager.h"
 

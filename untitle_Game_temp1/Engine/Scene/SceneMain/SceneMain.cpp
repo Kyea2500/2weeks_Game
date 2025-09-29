@@ -1,5 +1,5 @@
 #include "SceneMain.h"
-#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
+#include "../../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "../../InputDevice/game.h"
 #include "../../GameObject/Player/player.h"
 #include "../../GameObject/Enemy/enemy.h"

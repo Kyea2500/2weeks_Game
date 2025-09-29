@@ -1,5 +1,5 @@
 #include "enemy.h"
-#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
+#include "../../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 #include "../../InputDevice/game.h"
 namespace
 	{
@@ -381,7 +381,7 @@ void enemy::DrawEnemyMiniUnit()
 			DrawRectRotaGraph(static_cast<int>(m_enemyMiniUnitPos[i].x), static_cast<int>(m_enemyMiniUnitPos[i].y),
 				0, 0, kEnemyMiniUnitGraphWidth, kEnemyMiniUnitGraphHeight, kEnemyScale, 0.0, m_enemyMiniUnitHandle[i], TRUE);
 			// 小さいタイプの雑魚敵の描画処理
-			DrawCircle(m_enemyMiniUnitPos[i].x, m_enemyMiniUnitPos[i].y, kEnemyRadius / 4, kEnemyColor, FALSE); // 青い円を描画
+			DrawCircle(m_enemyMiniUnitPos[i].x, m_enemyMiniUnitPos[i].y, kEnemyRadius / 4,0xff0000, FALSE); // 青い円を描画
 	}
 }
 

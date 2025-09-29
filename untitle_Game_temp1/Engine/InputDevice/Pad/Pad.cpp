@@ -1,5 +1,5 @@
 #include "Pad.h"
-#include "../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
+#include "../../../プロジェクトに追加すべきファイル_VC用/DxLib.h"
 
 namespace
 {
