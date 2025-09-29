@@ -143,7 +143,11 @@ void enemy::Update()
 	if (m_Life > 0)
 	{
 		UpdateEnemy();
-		UpdateEnemyUnit();
+		if(m_Life < kEnemyLife/half)
+		{
+			// G‹›“G‚ğ•ú‚Â
+			UpdateEnemyUnit();
+		}
 		UpdateEnemyMiniUnit();
 		UpdateEnemyBullet();
 	}
@@ -263,9 +267,6 @@ void enemy::UpdateEnemy()
 // G‹›“G‚ÌXVˆ—
 void enemy::UpdateEnemyUnit()
 {
-	// Boss‚Ì•ú‚ÂG‹›“G‚Ìˆê‚Â
-	// ‘Ì—Í‚ª”¼•ªˆÈ‰º‚É‚È‚Á‚½‚Ì‚İ•ú‚½‚ê‚é
-	if (m_Life > kEnemyLife / half)return;
 	// ˆê“x‚Å‚à•ú‚½‚ê‚½ê‡A‚±‚¢‚Â‚ç‚ÍoŒ»‚µ‚È‚­‚È‚é
 	if( m_isEnemyUnitReleased == false)
 	{

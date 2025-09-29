@@ -1,18 +1,18 @@
 ﻿  enemy.cpp
 C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(56,9): warning C4244: '初期化中': 'const float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(91,12): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(254,13): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(259,13): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(301,15): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(306,15): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(356,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(356,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(370,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(370,53): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(370,32): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(384,61): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(384,36): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(435,14): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(440,14): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(449,14): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(258,13): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(263,13): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(302,15): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(307,15): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(357,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(357,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(371,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(371,53): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(371,32): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(385,61): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(385,36): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(436,14): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(441,14): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\Engine\GameObject\Enemy\enemy.cpp(450,14): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
   untitle_Game_temp1.vcxproj -> C:\Users\安藤 歩夢\Documents\GitHub\2weeks_Game\untitle_Game_temp1\x64\Debug\untitle_Game_temp1.exe
